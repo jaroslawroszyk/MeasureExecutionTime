@@ -4,17 +4,17 @@ void long_operation()
 {
     /* Simulating heavy operation */
     using namespace std::chrono_literals;
-    std::this_thread::sleep_for(51ms);
+    std::this_thread::sleep_for(52ms);
 }
 
 int main()
 {
     MeasureTime time;
-    time.startTimer();
+    time.start();
 
     long_operation();
-    
-    time.endTimer();
+
+    time.end();
     time.getTimeInMsAsDouble();
     time.getTimeInMsAsInt();
 
