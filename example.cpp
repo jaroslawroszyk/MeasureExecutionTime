@@ -10,10 +10,12 @@ void long_operation()
 int main()
 {
     MeasureTime time;
+    MeasureTime timer2;
     time.start();
-
+    timer2.start();
     long_operation();
-
+    timer2.end();
+    timer2.getTimeInMsAsDouble("timer2");
     time.end();
     time.getTimeInMsAsDouble();
     time.getTimeInMsAsInt();
